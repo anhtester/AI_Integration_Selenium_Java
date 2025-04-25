@@ -1,4 +1,4 @@
-package com.anhtester.openai;
+package com.anhtester.ai;
 
 import com.openai.client.OpenAIClient;
 import com.openai.client.okhttp.OpenAIOkHttpClient;
@@ -27,7 +27,7 @@ public class OpenAIClientExample {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .addSystemMessage("Bạn là một trợ lý AI chuyên về testing.")
                 .addUserMessage("Viết cho tôi một đoạn giới thiệu về Anh Tester.")
-                .model(ChatModel.GPT_4_1)
+                .model(ChatModel.GPT_4O)
                 .build();
 
         // Gọi API và xử lý response

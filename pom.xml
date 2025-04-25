@@ -23,6 +23,35 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.auth/google-auth-library-oauth2-http -->
+        <dependency>
+            <groupId>com.google.auth</groupId>
+            <artifactId>google-auth-library-oauth2-http</artifactId>
+            <version>1.33.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.12.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.openai/openai-java -->
         <dependency>
             <groupId>com.openai</groupId>
             <artifactId>openai-java</artifactId>

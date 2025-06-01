@@ -21,8 +21,8 @@ public class WebUI {
 
     // Hàm phân tích lỗi bằng Gemini API
     private void analyzeError(String errorMessage) {
-        String prompt = "Phân tích lỗi Selenium: " + errorMessage + " và đề xuất cách khắc phục.";
-        String analysis = GeminiAPIClientHelper.generateTestCase(prompt);
+        String prompt = "Phân tích lỗi trong Selenium Java: " + errorMessage + " và đề xuất cách khắc phục.";
+        String analysis = GeminiAPIClientHelper.sendErrorForGeminiAI(prompt);
         if (analysis.isEmpty()) {
             System.err.println("Không thể phân tích lỗi từ Gemini API: " + errorMessage);
         } else {
@@ -39,6 +39,7 @@ public class WebUI {
         } catch (TimeoutException e) {
             errorMessage = "Hết thời gian chờ phần tử hiển thị: " + locator + ". Lỗi: " + e.getMessage();
             //System.err.println(errorMessage);
+            analyzeError(errorMessage);
             Assert.fail(errorMessage);
             return null;
         }
@@ -87,7 +88,8 @@ public class WebUI {
             //System.err.println(errorMessage);
             analyzeError(errorMessage);
             Assert.fail(errorMessage);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             String errorMessage = "Lỗi khi nhập văn bản vào phần tử: " + locator + ". Lỗi: " + e.getMessage();
             //System.err.println(errorMessage);
             analyzeError(errorMessage);

@@ -18,7 +18,6 @@ public class SeleniumWithGeminiTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         webUI = new WebUI(driver);
     }
 

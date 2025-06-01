@@ -8,8 +8,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class SeleniumWithGeminiTest {
     private WebDriver driver;
     private WebUI webUI;
@@ -26,7 +24,7 @@ public class SeleniumWithGeminiTest {
         driver.get("https://crm.anhtester.com/admin/authentication");
 
         webUI.setText(By.id("email"), "admin@example.com");
-        webUI.setText(By.id("password123"), "123456");
+        webUI.setText(By.id("password"), "123456"); //step fail
         webUI.clickElement(By.xpath("//button[normalize-space()='Login']"));
 
         String dashboardText = webUI.getElementText(By.xpath("//span[normalize-space()='Dashboard']"));

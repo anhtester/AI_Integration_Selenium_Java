@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class GeminiAPIClientHelper {
-    private static final String API_KEY = "AIzaSyCZbVisDiqHUurdkhjM4R0DM-VLaSdtumY";
+    private static final String API_KEY = ""; //Get API key https://aistudio.google.com/apikey
     private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
 
     public static String sendErrorForGeminiAI(String prompt) {
